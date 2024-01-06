@@ -14,8 +14,12 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error(err));
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.error("MongoDB connection error:", error.message);
+  });
 
 // Middlewares
 app.use(express.json());
@@ -23,5 +27,5 @@ app.use(express.json());
 // Routes
 app.use("/api/sales", router);
 
-// Start server
+
 module.exports = app;
