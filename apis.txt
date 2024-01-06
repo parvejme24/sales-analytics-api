@@ -1,0 +1,8 @@
+
+http://localhost:5050/api/sales/total-revenue
+http://localhost:5050/api/sales/quantity-by-product
+http://localhost:5050/api/sales/top-products
+http://localhost:5050/api/sales/average-price
+http://localhost:5050/api/sales/revenue-by-month
+http://localhost:5050/api/sales/highest-quantity-sold
+http://localhost:5050/api/sales/department-salary-expense
