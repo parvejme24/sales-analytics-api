@@ -24,8 +24,15 @@ mongoose
 // Middlewares
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Welcome to Sels-Analytics-API Server" });
+});
+
+app.get("*", (req, res) => {
+  res.status(401).json({message: "Invalid Routes."})
+});
+
 // Routes
 app.use("/api/sales", router);
-
 
 module.exports = app;

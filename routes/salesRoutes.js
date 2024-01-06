@@ -1,6 +1,6 @@
 const express = require("express");
+const Sale = require("../models/salesModel");
 const router = express.Router();
-const Sale = require("../models/sales.model");
 
 // Calculate total revenue
 router.get("/total-revenue", async (req, res) => {
