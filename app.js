@@ -3,8 +3,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/salesRoutes");
 require("dotenv").config();
+var bodyParser = require("body-parser");
 
 const app = express();
+app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose
