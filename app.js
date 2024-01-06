@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const salesRoutes = require("./routes/sales.routes");
+const router = require("./routes/salesRoutes");
 require("dotenv").config();
 
 const app = express();
@@ -19,7 +19,7 @@ mongoose
 app.use(express.json());
 
 // Routes
-app.use("/api/sales", salesRoutes);
+app.use("/api/sales", router);
 
 // Start server
 module.exports = app;
